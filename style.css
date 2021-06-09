@@ -1,0 +1,27 @@
+
+
+
+body {
+	padding:100px;
+	background-color:#202020;
+	color:#BABABA;
+	font-size:25px;
+	font-family:verdana;
+}
+
+
+a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+
+a:visited {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#FFFFFF;
+	text-decoration:underline;
+}
