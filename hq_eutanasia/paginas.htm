@@ -1,0 +1,63 @@
+
+<html>
+
+<script>
+
+	var currentPage = 1
+
+	function next() {
+
+		if (currentPage >= 70) {
+			currentPage = 70;
+			alert("FIM");
+
+			return;
+		}
+
+		currentPage++;
+		virarPagina();
+
+	}
+
+
+	function previous() {
+
+		if (currentPage <= 1) {
+			currentPage = 1;
+			alert("PRIMEIRA PÁGINA");
+
+			return;
+		}
+
+		currentPage--;
+		virarPagina();
+
+	}
+
+	function virarPagina() {
+		var mImg = document.getElementById("img_pagina");
+		mImg.src = "web/pagina_" + getCurrentPageString() + ".png";
+	}
+
+	function getCurrentPageString() {
+
+		if (currentPage < 10) {
+			return "00" + currentPage;
+		}
+
+		return "0" + currentPage;
+
+	}
+
+</script>
+
+<body>
+
+<img id="img_pagina" src="web/pagina_001.png">
+
+<p align="center">
+<a href="javascript:previous()">Anterior</a> | <a href="javascript:next()">Próxima</a>
+
+</body>
+
+</html>
